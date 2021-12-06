@@ -1,0 +1,12 @@
+{
+	"compilerOptions": {
+		"lib": ["DOM", "ES2021"],
+		"baseUrl": "./",
+		"paths": {
+			"@/shared": ["shared"]
+		}
+	},
+	"ts-node": {
+		"require": ["tsconfig-paths/register"]
+	}
+}
