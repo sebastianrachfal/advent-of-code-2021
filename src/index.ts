@@ -4,6 +4,6 @@ const sectionName = process.argv[2];
 
 console.info(`Running section \`${sectionName}\``);
 
-execSync(`${process.argv[0]} ./src/${sectionName}/index.ts`, {
+execSync(`npx nodemon ./src/${sectionName}/index.ts`, {
 	stdio: 'inherit',
 });
