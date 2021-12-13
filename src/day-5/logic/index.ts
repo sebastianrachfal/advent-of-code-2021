@@ -1,14 +1,15 @@
-import { calculateBoard, printBoard } from './helpers';
+import {
+	calculateBoard,
+	getBoardOverlaps,
+	// printBoard
+} from './helpers';
 
 export function getOverlapCount(values: string[]) {
 	const board = calculateBoard(values);
 
 	// printBoard(board);
 
-	return board.reduce(
-		(a, b) => a + (b ? b.filter((item) => item > 1).length : 0),
-		0
-	);
+	return getBoardOverlaps(board);
 }
 
 export function getOverlapCountWithDiagonals(values: string[]) {
@@ -16,8 +17,5 @@ export function getOverlapCountWithDiagonals(values: string[]) {
 
 	// printBoard(board);
 
-	return board.reduce(
-		(a, b) => a + (b ? b.filter((item) => item > 1).length : 0),
-		0
-	);
+	return getBoardOverlaps(board);
 }

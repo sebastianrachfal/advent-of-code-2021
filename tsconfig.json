@@ -2,6 +2,7 @@
 	"compilerOptions": {
 		"lib": ["DOM", "ES2021"],
 		"baseUrl": "./",
+		"downlevelIteration": true,
 		"paths": {
 			"@/shared": ["shared"]
 		}

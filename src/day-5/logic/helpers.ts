@@ -55,3 +55,9 @@ export function printBoard(board: number[][]) {
 	console.log('\n');
 	console.log(filledBoard.map((line) => line.join('')).join('\n'));
 }
+
+export const getBoardOverlaps = (board: number[][]) =>
+	board.reduce(
+		(a, b) => a + (b ? b.filter((item) => item > 1).length : 0),
+		0
+	);
